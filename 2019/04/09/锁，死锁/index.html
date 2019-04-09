@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="死锁，操作系统,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="一只弱鸡">
-<meta property="og:type" content="website">
-<meta property="og:title" content="渣渣在此">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="锁， 死锁锁(lock) 自旋锁(spin lock) 介绍：自旋锁与互斥锁有些类似，只是自旋锁不会引起调用者睡眠。如果调用者的所需自旋锁正在被当前执行单元保持，调用者就进行死循环，一直检测保持者是否释放锁，自旋锁是为了解决互斥使用资源的问题而存在的。   优点：自旋锁不会引起调用者睡眠，所以自旋锁的效率远高于互斥锁(省去了保留上下文等操作，cpu的抢占，信号的发送等开销)。 缺点：1、自旋锁一直">
+<meta name="keywords" content="死锁，操作系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="锁与死锁">
+<meta property="og:url" content="http://yoursite.com/2019/04/09/锁，死锁/index.html">
 <meta property="og:site_name" content="渣渣在此">
-<meta property="og:description" content="一只弱鸡">
+<meta property="og:description" content="锁， 死锁锁(lock) 自旋锁(spin lock) 介绍：自旋锁与互斥锁有些类似，只是自旋锁不会引起调用者睡眠。如果调用者的所需自旋锁正在被当前执行单元保持，调用者就进行死循环，一直检测保持者是否释放锁，自旋锁是为了解决互斥使用资源的问题而存在的。   优点：自旋锁不会引起调用者睡眠，所以自旋锁的效率远高于互斥锁(省去了保留上下文等操作，cpu的抢占，信号的发送等开销)。 缺点：1、自旋锁一直">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-09T14:07:05.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="渣渣在此">
-<meta name="twitter:description" content="一只弱鸡">
+<meta name="twitter:title" content="锁与死锁">
+<meta name="twitter:description" content="锁， 死锁锁(lock) 自旋锁(spin lock) 介绍：自旋锁与互斥锁有些类似，只是自旋锁不会引起调用者睡眠。如果调用者的所需自旋锁正在被当前执行单元保持，调用者就进行死循环，一直检测保持者是否释放锁，自旋锁是为了解决互斥使用资源的问题而存在的。   优点：自旋锁不会引起调用者睡眠，所以自旋锁的效率远高于互斥锁(省去了保留上下文等操作，cpu的抢占，信号的发送等开销)。 缺点：1、自旋锁一直">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/09/锁，死锁/">
 
 
 
 
 
-  <title>渣渣在此</title>
+  <title>锁与死锁 | 渣渣在此</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<a href="https://github.com/whatthefuck233"><img width="149" height="149" style="position: absolute; top: 0; right: 0; border: 0;" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 		
@@ -278,9 +279,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -310,9 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/09/锁，死锁/" itemprop="url">锁与死锁</a></h1>
+          <h1 class="post-title" itemprop="name headline">锁与死锁</h1>
         
 
         <div class="post-meta">
@@ -384,9 +383,7 @@
       
 
       
-        
-          
-            <h2 id="锁，-死锁"><a href="#锁，-死锁" class="headerlink" title="锁， 死锁"></a><a href="#3">锁</a>， <a href="#4">死锁</a></h2><h3 id="锁-lock"><a href="#锁-lock" class="headerlink" title="锁(lock)"></a><span id="3">锁(lock)</span></h3><hr>
+        <h2 id="锁，-死锁"><a href="#锁，-死锁" class="headerlink" title="锁， 死锁"></a><a href="#3">锁</a>， <a href="#4">死锁</a></h2><h3 id="锁-lock"><a href="#锁-lock" class="headerlink" title="锁(lock)"></a><span id="3">锁(lock)</span></h3><hr>
 <h5 id="自旋锁-spin-lock"><a href="#自旋锁-spin-lock" class="headerlink" title="自旋锁(spin lock)"></a><span id="2">自旋锁(spin lock)</span></h5><blockquote>
 <p><strong>介绍</strong>：<a href="#2">自旋锁</a>与<a href="#1">互斥锁</a>有些类似，只是自旋锁不会引起调用者睡眠。如果调用者的所需自旋锁正在被当前执行单元保持，调用者就进行死循环，一直检测保持者是否释放锁，自旋锁是为了解决互斥使用资源的问题而存在的。</p>
 </blockquote>
@@ -425,8 +422,6 @@
 <p>四. 处理死锁的基本方法<br>解决死锁的基本方法：<br>1.预防死锁：<br>资源一次性分配：（破坏请求和保持条件）<br>可剥夺资源：即当某进程新的资源未满足时，释放已占有的资源（破坏不可剥夺条件）<br>资源有序分配法：系统给每类资源赋予一个编号，每一个进程按编号递增的顺序请求资源，释放则相反（破坏环路等待条件）<br>2.避免死锁:<br>预防死锁的几种策略，会严重地损害系统性能。因此在避免死锁时，要施加较弱的限制，从而获得较满意的系统性能。由于在避免死锁的策略中，允许进程动态地申请资源。因而，系统在进行资源分配之前预先计算资源分配的安全性。若此次分配不会导致系统进入不安全状态，则将资源分配给进程；否则，进程等待。其中最具有代表性的避免死锁算法是<strong>银行家算法</strong>。<br>3.检测死锁<br>首先为每个进程和每个资源指定一个唯一的号码；<br>然后建立<strong>资源分配表和进程等待表</strong>。<br>4.解除死锁:<br>当发现有进程死锁后，便应立即把它从死锁状态中解脱出来，常采用的方法有：<br>剥夺资源：从其它进程剥夺足够数量的资源给死锁进程，以解除死锁状态；<br>撤消进程：可以直接撤消死锁进程或撤消代价最小的进程，直至有足够的资源可用，死锁状态消除为止；所谓代价是指优先级、运行代价、进程的重要性和价值等。</p>
 </blockquote>
 
-          
-        
       
     </div>
     
@@ -441,284 +436,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/09/你好-hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lsy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/001.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="渣渣在此">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/09/你好-hexo/" itemprop="url">你好,hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-09T12:52:33+08:00">
-                2019-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建博客</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/死锁，操作系统/" rel="tag"># 死锁，操作系统</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>使用Hexo,是简单的一件事。测试文本。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/09/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lsy">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/001.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="渣渣在此">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/09/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-09T12:33:12+08:00">
-                2019-04-09
-              </time>
+              <a href="/2019/04/09/你好-hexo/" rel="next" title="你好,hexo">
+                <i class="fa fa-chevron-left"></i> 你好,hexo
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -728,10 +475,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -739,6 +487,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -759,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -822,6 +583,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#锁，-死锁"><span class="nav-number">1.</span> <span class="nav-text">锁， 死锁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#锁-lock"><span class="nav-number">1.1.</span> <span class="nav-text">锁(lock)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自旋锁-spin-lock"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">自旋锁(spin lock)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#互斥锁-mutex-lock"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">互斥锁(mutex lock)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#两种锁的开销比较"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">两种锁的开销比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#注："><span class="nav-number">1.1.0.4.</span> <span class="nav-text">注：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#死锁-deadlock"><span class="nav-number">1.2.</span> <span class="nav-text">死锁(deadlock)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -974,6 +751,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

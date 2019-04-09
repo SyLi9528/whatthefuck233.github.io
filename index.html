@@ -298,7 +298,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lsy">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/pic/er1.jpg">
+      <meta itemprop="image" content="/images/pic/aa3.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -387,7 +387,7 @@
         
           
             <h2 id="锁与死锁"><a href="#锁与死锁" class="headerlink" title="锁与死锁"></a><a href="#3">锁</a>与<a href="#4">死锁</a></h2><h3 id="锁-lock"><a href="#锁-lock" class="headerlink" title="锁(lock)"></a><span id="3">锁(lock)</span></h3><hr>
-<h5 id="自旋锁-spin-lock"><a href="#自旋锁-spin-lock" class="headerlink" title="自旋锁(spin lock)"></a><span id="2">自旋锁(spin lock)</span></h5><blockquote>
+<h4 id="自旋锁-spin-lock"><a href="#自旋锁-spin-lock" class="headerlink" title="自旋锁(spin lock)"></a><span id="2">自旋锁(spin lock)</span></h4><blockquote>
 <p><strong>介绍</strong>：<a href="#2">自旋锁</a>与<a href="#1">互斥锁</a>有些类似，只是自旋锁不会引起调用者睡眠。如果调用者的所需自旋锁正在被当前执行单元保持，调用者就进行死循环，一直检测保持者是否释放锁，自旋锁是为了解决互斥使用资源的问题而存在的。</p>
 </blockquote>
 <blockquote>
@@ -397,17 +397,17 @@
 <p><strong>适用范围</strong>：我们要慎重使用自旋锁，自旋锁只有在内核可抢占式或SMP的情况下才真正需要，在单CPU且不可抢占式的内核下，自旋锁的操作为空操作。自旋锁适用于多核且锁使用者保持锁时间比较短的情况下。  </p>
 </blockquote>
 <hr>
-<h5 id="互斥锁-mutex-lock"><a href="#互斥锁-mutex-lock" class="headerlink" title="互斥锁(mutex lock)"></a><span id="1">互斥锁(mutex lock)</span></h5><blockquote>
+<h4 id="互斥锁-mutex-lock"><a href="#互斥锁-mutex-lock" class="headerlink" title="互斥锁(mutex lock)"></a><span id="1">互斥锁(mutex lock)</span></h4><blockquote>
 <p><strong>介绍</strong>： 互斥锁属于sleep-waiting类型的锁。例如在一个双核的机器上有两个线程(线程A和线程B)，它们分别运行在Core0和 Core1上。假设线程A想要通过pthread_mutex_lock操作去得到一个临界区的锁，而此时这个锁正被线程B所持有，那么线程A就会被阻塞 (blocking)，Core0 会在此时进行上下文切换(Context Switch)将线程A置于等待队列中，此时Core0就可以运行其他的任务(例如另一个线程C)而不必进行忙等待。而自旋锁则不然，它属于busy-waiting类型的锁，如果线程A是使用pthread_spin_lock操作去请求锁，那么线程A就会一直在 Core0上进行忙等待并不停的进行锁请求，直到得到这个锁为止。</p>
 </blockquote>
 <blockquote>
 <p><strong>适用范围</strong>：互斥锁用于临界区持锁时间比较长的操作，比如下面这些情况都可以考虑。<br>1、临界区有IO操作<br>2、临界区代码复杂或者循环量大<br>3、临界区竞争非常激烈<br>4、单核处理器  </p>
 </blockquote>
 <hr>
-<h5 id="两种锁的开销比较"><a href="#两种锁的开销比较" class="headerlink" title="两种锁的开销比较"></a>两种锁的开销比较</h5><blockquote>
+<h4 id="两种锁的开销比较"><a href="#两种锁的开销比较" class="headerlink" title="两种锁的开销比较"></a>两种锁的开销比较</h4><blockquote>
 <p>互斥锁的起始原始开销要高于自旋锁，但是基本是一劳永逸，[临界区][1]持锁时间的大小并不会对互斥锁的开销造成影响，而自旋锁是死循环检测，加锁全程消耗cpu，起始开销虽然低于互斥锁，但是随着持锁时间，加锁的开销是线性增长。</p>
 </blockquote>
-<h5 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h5><blockquote>
+<h4 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h4><blockquote>
 <p>[1]：<strong>临界区(Critical Section)</strong>：  保证在某一时刻只有一个线程能访问数据的简便办法。在任意时刻只允许一个线程对共享资源进行访问。如果有多个线程试图同时访问临界区，那么在有一个线程进入后其他所有试图访问此临界区的线程将被挂起，并一直持续到进入临界区的线程离开。临界区在被释放后，其他线程可以继续抢占，并以此达到用原子方式操作共享资源的目的。</p>
 </blockquote>
 <hr>
@@ -477,7 +477,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lsy">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/pic/er1.jpg">
+      <meta itemprop="image" content="/images/pic/aa3.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -619,7 +619,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lsy">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/pic/er1.jpg">
+      <meta itemprop="image" content="/images/pic/aa3.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -764,7 +764,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/pic/er1.jpg" alt="lsy">
+              <img class="site-author-image" itemprop="image" src="/images/pic/aa3.jpg" alt="lsy">
             
               <p class="site-author-name" itemprop="name">lsy</p>
               <p class="site-description motion-element" itemprop="description">一只弱鸡</p>

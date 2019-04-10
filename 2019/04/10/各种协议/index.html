@@ -89,7 +89,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://img-blog.csdn.net/20180529182740527?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzM3OTY0MDcx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
 <meta property="og:image" content="https://img-blog.csdn.net/20180529191603529?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzM3OTY0MDcx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2019-04-10T08:12:50.077Z">
+<meta property="og:updated_time" content="2019-04-10T08:18:38.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="各种协议">
 <meta name="twitter:description" content="ARP协议 转载[图解]ARP协议（一）简单说就是一问一答，pc1通过广播的方式将请求包发送，交换机或WiFi设备(无线路由器)收到广播包时，会将此数据发给同一局域网的所有主机。PC1发送的请求广播包同时被其他主机收到，然后PC3和PC4收到之后（发现不是问自己）则丢弃。而PC2收到之后，根据请求包里面的信息（有自己的IP地址），判断是给自己的，所以不会做丢弃动作，而是返回ARP回应包。PC2在收">
@@ -410,7 +410,7 @@
 <p>为什么不使用域名通信?  </p>
 <ol>
 <li>因为IP地址是固定长度的，IPv4是32位，IPv6是128位，而域名是变长的，不便于计算机处理。</li>
-<li>IP地址对于用户来说不方便记忆，但域名便于用户使用，例如<a href="http://www.baidu.com这是百度的域名。" target="_blank" rel="noopener">www.baidu.com这是百度的域名。</a>  </li>
+<li>IP地址对于用户来说不方便记忆，但域名便于用户使用，例如<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 这是百度的域名。  </li>
 <li>总结一点就是IP地址是面向主机的，而域名则是面向用户的。  </li>
 </ol>
 </blockquote>
@@ -473,15 +473,15 @@
 <p>每一级域名服务器都知道下级域名服务器的IP地址</p>
 </blockquote>
 <blockquote>
-<p>三、域名解析过程<br>具体可描述如下： </p>
+<p>三、域名解析过程<br>具体可描述如下：</p>
 <ol>
-<li>主机先向本地域名服务器进行递归查询 </li>
-<li>本地域名服务器采用迭代查询，向一个根域名服务器进行查询 </li>
-<li>根域名服务器告诉本地域名服务器，下一次应该查询的顶级域名服务器的IP地址 </li>
-<li>本地域名服务器向顶级域名服务器进行查询 </li>
-<li>顶级域名服务器告诉本地域名服务器，下一步查询权限服务器的IP地址 </li>
-<li>本地域名服务器向权限服务器进行查询 </li>
-<li>权限服务器告诉本地域名服务器所查询的主机的IP地址 </li>
+<li>主机先向本地域名服务器进行递归查询</li>
+<li>本地域名服务器采用迭代查询，向一个根域名服务器进行查询</li>
+<li>根域名服务器告诉本地域名服务器，下一次应该查询的顶级域名服务器的IP地址</li>
+<li>本地域名服务器向顶级域名服务器进行查询</li>
+<li>顶级域名服务器告诉本地域名服务器，下一步查询权限服务器的IP地址</li>
+<li>本地域名服务器向权限服务器进行查询</li>
+<li>权限服务器告诉本地域名服务器所查询的主机的IP地址</li>
 <li>本地域名服务器最后把查询结果告诉主机   </li>
 </ol>
 </blockquote>

@@ -312,7 +312,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/10/各种协议/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2019/04/10/各种协议/" itemprop="url">各种协议</a></h1>
         
 
         <div class="post-meta">
@@ -324,7 +324,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-10T12:40:32+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-10T14:52:33+08:00">
                 2019-04-10
               </time>
             
@@ -334,6 +334,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/计算机网络/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机网络</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -364,10 +386,7 @@
       
         
           
-            <hr>
-<p>title: “各种协议”<br>date: 2019-04-010 14:52:33<br>tags: [计算机网络]<br>categories: 计算机网络</p>
-<hr>
-<h3 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h3><blockquote>
+            <h3 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h3><blockquote>
 <p>转载<a href="https://www.cnblogs.com/csguo/p/7527303.html" target="_blank" rel="noopener">[图解]ARP协议（一）</a><br>简单说就是一问一答，pc1通过<strong>广播</strong>的方式将请求包发送，交换机或WiFi设备(无线路由器)收到广播包时，会将此数据发给同一局域网的所有主机。PC1发送的请求广播包同时被其他主机收到，然后PC3和PC4收到之后（发现不是问自己）则丢弃。而PC2收到之后，根据请求包里面的信息（有自己的IP地址），判断是给自己的，所以不会做丢弃动作，而是返回ARP回应包。<br>PC2在收到请求之后，就可以将PC1的IP和MAC映射信息存储在本地的【ARP缓存表】，既然知道PC1在哪里，就可以返回ARP单播回应包。PC1收到单播包后，将PC2的ip和mac地址存到自己的【ARP缓存表】，以便后用，这样就可以进行网络层的传输了。<br><strong>广播</strong>：对于初学者而言，我们只需要知道，大部分的广播包，它们有一个共同特征：二层封装时目的MAC是全f（ffff.ffff.ffff）或三层封装时目的IP是全1（255.255.255.255）。可以这样更方便的记住：目的地址最大的，就是广播。<br><strong>单播</strong>：与广播概念相对，封装时目的ip全用0。</p>
 </blockquote>
 <hr>
@@ -1027,7 +1046,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1038,7 +1057,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

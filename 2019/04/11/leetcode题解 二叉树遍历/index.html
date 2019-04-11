@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="尝试,搭建,">
+  <meta name="keywords" content="leetcode,二叉树遍历,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="使用Hexo,是简单的一件事。测试文本。">
-<meta name="keywords" content="尝试,搭建">
+<meta name="description" content="230. 二叉搜索树中第K小的元素 给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中第 k 个最小的元素。说明：你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。   示例 1:输入: root = [3,1,4,null,2], k = 1输出: 1     示例 2:输入: root = [5,3,6,2,4,null,null,1], k = 3输出: 3">
+<meta name="keywords" content="leetcode,二叉树遍历">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好,hexo">
-<meta property="og:url" content="http://yoursite.com/2019/04/09/你好-hexo/index.html">
+<meta property="og:title" content="leetcode题解 二叉树遍历">
+<meta property="og:url" content="http://yoursite.com/2019/04/11/leetcode题解 二叉树遍历/index.html">
 <meta property="og:site_name" content="渣渣在此">
-<meta property="og:description" content="使用Hexo,是简单的一件事。测试文本。">
+<meta property="og:description" content="230. 二叉搜索树中第K小的元素 给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中第 k 个最小的元素。说明：你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。   示例 1:输入: root = [3,1,4,null,2], k = 1输出: 1     示例 2:输入: root = [5,3,6,2,4,null,null,1], k = 3输出: 3">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-09T06:44:03.870Z">
+<meta property="og:updated_time" content="2019-04-11T05:21:18.745Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好,hexo">
-<meta name="twitter:description" content="使用Hexo,是简单的一件事。测试文本。">
+<meta name="twitter:title" content="leetcode题解 二叉树遍历">
+<meta name="twitter:description" content="230. 二叉搜索树中第K小的元素 给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中第 k 个最小的元素。说明：你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。   示例 1:输入: root = [3,1,4,null,2], k = 1输出: 1     示例 2:输入: root = [5,3,6,2,4,null,null,1], k = 3输出: 3">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/09/你好-hexo/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/11/leetcode题解 二叉树遍历/">
 
 
 
 
 
-  <title>你好,hexo | 渣渣在此</title>
+  <title>leetcode题解 二叉树遍历 | 渣渣在此</title>
   
 
 
@@ -294,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/09/你好-hexo/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/11/leetcode题解 二叉树遍历/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lsy">
@@ -311,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">你好,hexo</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode题解 二叉树遍历</h1>
         
 
         <div class="post-meta">
@@ -323,8 +323,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-09T12:52:33+08:00">
-                2019-04-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-11T13:22:17+08:00">
+                2019-04-11
               </time>
             
 
@@ -346,8 +346,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/搭建博客/" itemprop="url" rel="index">
-                    <span itemprop="name">搭建博客</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
 
@@ -383,7 +383,33 @@
       
 
       
-        <p>使用Hexo,是简单的一件事。测试文本。</p>
+        <h3 id="230-二叉搜索树中第K小的元素"><a href="#230-二叉搜索树中第K小的元素" class="headerlink" title="230. 二叉搜索树中第K小的元素"></a>230. <a href="https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/comments/" target="_blank" rel="noopener">二叉搜索树中第K小的元素</a></h3><blockquote>
+<p>给定一个二叉搜索树，编写一个函数 kthSmallest 来查找其中第 k 个最小的元素。<br>说明：<br>你可以假设 k 总是有效的，1 ≤ k ≤ 二叉搜索树元素个数。</p>
+</blockquote>
+<blockquote>
+<p>示例 1:<br>输入: root = [3,1,4,null,2], k = 1<br>输出: 1  </p>
+</blockquote>
+<blockquote>
+<p>示例 2:<br>输入: root = [5,3,6,2,4,null,null,1], k = 3<br>输出: 3  </p>
+</blockquote>
+<blockquote>
+<p>进阶：<br>如果二叉搜索树经常被修改（插入/删除操作）并且你需要频繁地查找第 k 小的值，你将如何优化 kthSmallest 函数？</p>
+</blockquote>
+<blockquote>
+<p>解法：其实是中序遍历。</p>
+<ol>
+<li>非递归，记录出栈元素  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;        <span class="comment">#中序遍历非递归</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">kthSmallest</span><span class="params">(self, root: TreeNode, k: int)</span> -&gt; int:</span></span><br><span class="line">        stack = list()</span><br><span class="line">        <span class="keyword">while</span> root <span class="keyword">or</span> stack:</span><br><span class="line">            <span class="keyword">while</span> root:</span><br><span class="line">                stack.append(root)</span><br><span class="line">                root = root.left</span><br><span class="line">            <span class="keyword">if</span> stack:</span><br><span class="line">                root = stack.pop()</span><br><span class="line">                k -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">if</span> k == <span class="number">0</span>:</span><br><span class="line">                    <span class="keyword">return</span> root.val</span><br><span class="line">                root = root.right</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>递归用栈保存<br>暂未实现</li>
+<li>递归使用yield返回<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;        <span class="comment">#中序遍历递归</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">kthSmallest</span><span class="params">(self, root: TreeNode, k: int)</span> -&gt; int:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">insorder</span><span class="params">(root)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> root.left:</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">from</span> insorder(root.left)</span><br><span class="line">            <span class="keyword">yield</span> root.val</span><br><span class="line">            <span class="keyword">if</span> root.right:</span><br><span class="line">                <span class="keyword">yield</span> <span class="keyword">from</span> insorder(root.right)  </span><br><span class="line">        cr = insorder(root)</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(k):</span><br><span class="line">            ans = next(cr)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>额，还有一种没解决的,就是这种。为什么没有yield from 就不进入root.left或root.right等待了…<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt;        <span class="comment">#中序遍历递归</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">kthSmallest</span><span class="params">(self, root: TreeNode, k: int)</span> -&gt; int:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">insorder</span><span class="params">(root)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> root.left:</span><br><span class="line">                insorder(root.left)</span><br><span class="line">            <span class="keyword">yield</span> root.val</span><br><span class="line">            <span class="keyword">if</span> root.right:</span><br><span class="line">                insorder(root.right)  </span><br><span class="line">        cr = insorder(root)</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> range(k):</span><br><span class="line">            ans = next(cr)</span><br><span class="line">        <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure></p>
+</blockquote>
 
       
     </div>
@@ -401,9 +427,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/尝试/" rel="tag"># 尝试</a>
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
           
-            <a href="/tags/搭建/" rel="tag"># 搭建</a>
+            <a href="/tags/二叉树遍历/" rel="tag"># 二叉树遍历</a>
           
         </div>
       
@@ -416,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/09/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/04/10/各种协议/" rel="next" title="各种协议">
+                <i class="fa fa-chevron-left"></i> 各种协议
               </a>
             
           </div>
@@ -425,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/09/锁，死锁/" rel="prev" title="锁与死锁">
-                锁与死锁 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -480,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -543,6 +574,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#230-二叉搜索树中第K小的元素"><span class="nav-number">1.</span> <span class="nav-text">230. 二叉搜索树中第K小的元素</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
